@@ -29,6 +29,7 @@ class User
      */
     private $name;
 
+    private $recipes;
 
     /**
      * @var string
@@ -36,15 +37,6 @@ class User
      * @ORM\Column(type="text", nullable=true)
      */
     private $about;
-
-    /**
-     *
-     * One User may have many Recipes.
-     *
-     * @ORM\OneToMany(targetEntity="Recipe", mappedBy="author", cascade={"persist", "remove"})
-     * @var ArrayCollection
-     */
-    private $recipes;
 
     /**
      *
@@ -134,9 +126,11 @@ class User
         return $this->about;
     }
 
-    /**
-     * @return ArrayCollection
-     */
+    public function setRecipes($recipes)
+    {
+        $this->recipes = $recipes;
+    }
+
     public function getRecipes()
     {
         return $this->recipes;

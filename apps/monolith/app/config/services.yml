@@ -25,18 +25,9 @@ services:
     # -------------------------------
     # Recipe
     # -------------------------------
-    entity_manager.recipe:
-        class: Doctrine\Bundle\DoctrineBundle\Registry
-        factory: ["@doctrine", getManagerForClass]
-        arguments:
-            - AppBundle\Entity\Recipe
-
     repository.recipe:
         class: AppBundle\Repository\RecipeRepository
         public: true
-        factory: ["@doctrine.orm.entity_manager", getRepository]
-        arguments:
-            - AppBundle\Entity\Recipe
 
     # -------------------------------
     # Comment

@@ -10,8 +10,6 @@ class Recipe
      */
     private $data;
 
-    private $comments;
-
     public function __construct(array $data)
     {
         $this->data = $data;
@@ -144,15 +142,5 @@ class Recipe
     public function getImage()
     {
         return $this->get('image');
-    }
-
-    public function setComments($comments)
-    {
-        $this->comments = $comments;
-    }
-
-    public function getComments()
-    {
-        return $this->comments;
     }
 }
