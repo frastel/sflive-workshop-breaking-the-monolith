@@ -8,6 +8,9 @@ services:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
 
+    # -------------------------------
+    # Newsletter
+    # -------------------------------
     entity_manager.newsletter_subscription:
         class: Doctrine\Bundle\DoctrineBundle\Registry
         factory: ["@doctrine", getManagerForClass]
@@ -19,10 +22,16 @@ services:
         arguments:
             - "@entity_manager.newsletter_subscription"
 
+    # -------------------------------
+    # Recipe
+    # -------------------------------
     repository.recipe:
         class: AppBundle\Repository\RecipeRepository
         public: true
 
+    # -------------------------------
+    # Comment
+    # -------------------------------
     repository.comment:
         class: AppBundle\Repository\CommentRepository
         public: true
