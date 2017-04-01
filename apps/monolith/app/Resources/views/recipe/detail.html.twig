@@ -41,7 +41,7 @@
     </div>
     <div>
         <h3>Comments</h3>
-        {% for comment in recipe.comments %}
+        {% for comment in comments %}
             <div class="comment">
                 <p class="meta">
                     {{ comment.created|date('Y-m-d H:i') }} by <a href="{{ path('user', {'user': comment.author.id}) }}">{{ comment.author }}</a>

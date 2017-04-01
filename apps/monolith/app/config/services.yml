@@ -19,15 +19,14 @@ services:
         arguments:
             - "@entity_manager.newsletter_subscription"
 
-    entity_manager.recipe:
-        class: Doctrine\Bundle\DoctrineBundle\Registry
-        factory: ["@doctrine", getManagerForClass]
-        arguments:
-            - AppBundle\Entity\Recipe
-
     repository.recipe:
         class: AppBundle\Repository\RecipeRepository
         public: true
+
+    repository.comment:
+        class: AppBundle\Repository\CommentRepository
+        public: true
         factory: ["@doctrine.orm.entity_manager", getRepository]
         arguments:
-            - AppBundle\Entity\Recipe
+            - AppBundle\Entity\Comment
+
