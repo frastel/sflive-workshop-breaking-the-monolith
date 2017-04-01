@@ -22,7 +22,7 @@ Provides a JSON API for recipe data.
          - ./apps/recipe:/code
         command: ["./bin/init.sh"]
       recipe:
-        container_name: workshop-recipe-api
+        container_name: workshop-recipe
         build: docker/moby-dick
         ports:
          - "8001:80"
