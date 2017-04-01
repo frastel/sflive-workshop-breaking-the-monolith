@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: recipe-database
+    database_port: null
+    database_name: recipe
+    database_user: root
+    database_password: workshop
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 780e19ea8dedc35f7a312e89fabe7b4b3b4e90fb

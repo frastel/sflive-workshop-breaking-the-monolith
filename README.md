@@ -5,7 +5,7 @@
 * Vagrant: [1.9.*](https://www.vagrantup.com/downloads.html) 
 * Virtual Box: [5.1.*](https://www.virtualbox.org/wiki/Downloads)
  
-# Virtual Machine
+## Virtual Machine
 
 Start the machine
 
@@ -15,7 +15,7 @@ Destroy the machine
     
     vagrant destroy -f
 
-# The Application
+## The Application
 
 Start it with
 
@@ -27,7 +27,17 @@ Call it via browser
 
     http://192.168.33.10:8000
     
-# The helper scripts
+## Ports
+    
+Monolith:
+* http: http://192.168.33.10:8000
+* database: 9000
+
+Recipe:
+* http: http://192.168.33.10:8001
+* recipe-database: 9001    
+    
+## Helper scripts
 
 Composer
 
@@ -40,7 +50,7 @@ Composer
     # require lib
     ./bin/composer.sh require ramsey/uuid-doctrine
     
-# Running the tests
+## Running the tests
 
 For simplicity reasons you have to jump in the application container first
 
