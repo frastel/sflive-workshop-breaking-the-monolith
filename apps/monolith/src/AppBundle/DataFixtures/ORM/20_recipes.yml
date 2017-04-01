@@ -1,0 +1,50 @@
+AppBundle\Entity\Recipe:
+    recipe_spiegeleier:
+        id: 11111111-1111-1111-1111-111111111111
+        title: "Spiegeleier"
+        subtitle: ""
+        rating: 4.5
+        instructions: "Eier in einer Pfanne aufschlagen und braten."
+        published: '<dateTimeBetween("-2 hour", "-2 hour")>'
+        author: '@user_chefkoch'
+        preparationTime: '1'
+        difficulty: advanced
+        image: 'spiegeleier.jpeg'
+
+    recipe_zuckerberg:
+        id: 22222222-2222-2222-2222-222222222222
+        title: "Zuckerberg"
+        subtitle: "Ein Haufen Zucker"
+        rating: 4.5
+        instructions: "Zutaten vermengen, zu einem Berg anhäufen. Fertig! Viel Spaß damit!"
+        published: '<dateTimeBetween("-1 hour", "-1 hour")>'
+        author: '@user_internetz'
+        preparationTime: '1'
+        difficulty: simple
+        image: 'zuckerberg.jpeg'
+
+    recipe_donner:
+        id: 33333333-3333-3333-3333-333333333333
+        title: "Pangalaktischer Donnergurgler"
+        subtitle: "Der stärkste Drink der Galaxis!"
+        rating: 4.5
+        instructions: "Die Zutaten, außer der Grenadine, werden zusammen mit drei bis vier Eiswürfeln im Shaker geschüttelt, bis die Eiswürfel sich aufgelöst haben. Danach füllt man den Drink in eine Cocktailschale. Nach dem schälen der Pitahaya schneidet man das Fruchtfleisch in Pyramidenform. Die Pyramide gibt man ins Glas, bevor der Drink hineingeschüttet wird. Die Karambolenscheibe hängt man an den Glasrand. Über das Glas legt man zum Schluss eine Spirale aus der Orangenschale."
+        published: '<dateTimeBetween("now", "now")>'
+        author: '@user_chefkoch'
+        preparationTime: '10'
+        difficulty: simple
+        image: 'donnergurgler.jpeg'
+
+    recipe_{1..10}:
+        title: '<sentence(3)>'
+        subtitle: '<sentence(5)>'
+        rating: '<randomFloat(1, 1, 5)>'
+        instructions: '<text()>'
+        created: '<dateTimeBetween("-14 days", "-10 days")>'
+        updated: '<dateTimeBetween($created, "now")>'
+        published: '<dateTimeBetween($created, "now")>'
+        author: '@user_1'
+        preparationTime: '<numberBetween(10, 60)>'
+        cookingTime: '<numberBetween(10, 60)>'
+        restingTime: '<numberBetween(10, 60)>'
+        difficulty: expert

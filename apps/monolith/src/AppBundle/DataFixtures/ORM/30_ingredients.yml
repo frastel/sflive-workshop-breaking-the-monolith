@@ -1,0 +1,98 @@
+AppBundle\Entity\Ingredient:
+    ingredient_donner_01:
+        name: Wodka
+        unit: cl
+        amount: 6
+        recipe: '@recipe_donner'
+
+    ingredient_donner_02:
+        name: Gin
+        unit: cl
+        amount: 2
+        recipe: '@recipe_donner'
+
+    ingredient_donner_03:
+        name: Rum
+        unit: cl
+        amount: 1
+        info: brauner
+        recipe: '@recipe_donner'
+
+    ingredient_donner_04:
+        name: Rum
+        unit: Tropfen
+        amount: 1
+        info: "ab 70 Vol.-%"
+        recipe: '@recipe_donner'
+
+    ingredient_donner_05:
+        name: "Lychee Likör"
+        unit: cl
+        amount: 3
+        recipe: '@recipe_donner'
+
+    ingredient_donner_06:
+        name: "Peppino Kaktus Likör"
+        unit: cl
+        amount: 2
+        recipe: '@recipe_donner'
+
+    ingredient_donner_07:
+        name: Ananassaft
+        unit: cl
+        amount: 2
+        recipe: '@recipe_donner'
+
+    ingredient_donner_08:
+        name: Grapefruitsaft
+        unit: cl
+        amount: 4
+        recipe: '@recipe_donner'
+
+    ingredient_donner_09:
+        name: Zitronensaft
+        unit: cl
+        amount: 2
+        recipe: '@recipe_donner'
+
+    ingredient_donner_10:
+        name: Grenadine
+        unit: Tropfen
+        amount: 1
+        recipe: '@recipe_donner'
+
+    ingredient_donner_11:
+        name: Guaranapulver
+        unit: Msp
+        amount: 1
+        recipe: '@recipe_donner'
+
+    ingredient_donner_12:
+        name: Pitahaya(s)
+        unit:
+        amount: 1
+        recipe: '@recipe_donner'
+
+    ingredient_donner_13:
+        name: Karambolenscheibe(n)
+        unit:
+        amount: 1
+        recipe: '@recipe_donner'
+
+    ingredient_donner_14:
+        name: Orange(n)
+        unit:
+        amount: 1
+        recipe: '@recipe_donner'
+
+    ingredient_zuckerberg_01:
+        name: Zucker
+        unit: g
+        amount: 250
+        recipe: '@recipe_zuckerberg'
+
+    ingredient_spiegeleier_01:
+        name: Eiger
+        unit:
+        amount: 2
+        recipe: '@recipe_spiegeleier'

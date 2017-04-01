@@ -1,0 +1,7 @@
+.vagrant
+.local
+
+ubuntu*.log
+
+.composer/*
+!.composer/.gitkeep
