@@ -13,7 +13,6 @@ class CommentRepository extends EntityRepository
      *
      * @return Comment[]
      */
-    /*
     public function findByReference($type, $reference)
     {
         return $this->findBy(
@@ -24,5 +23,4 @@ class CommentRepository extends EntityRepository
             ['created' => 'DESC']
         );
     }
-    */
 }
