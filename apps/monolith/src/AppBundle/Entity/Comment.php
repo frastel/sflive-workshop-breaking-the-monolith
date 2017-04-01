@@ -22,12 +22,18 @@ class Comment
     private $id;
 
     /**
-     * @var Recipe
+     * @var string
      *
-     * @ORM\ManyToOne(targetEntity="Recipe", inversedBy="comments")
-     * @ORM\JoinColumn(name="recipe_id", referencedColumnName="id")
+     * @ORM\Column(type="string", length=100, nullable=false)
      */
-    private $recipe;
+    private $type;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string", length=100, nullable=false)
+     */
+    private $reference;
 
     /**
      * @var User
