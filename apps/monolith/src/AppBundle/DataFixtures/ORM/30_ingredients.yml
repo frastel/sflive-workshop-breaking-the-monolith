@@ -92,7 +92,7 @@ AppBundle\Entity\Ingredient:
         recipe: '@recipe_zuckerberg'
 
     ingredient_spiegeleier_01:
-        name: Eiger
+        name: Eier
         unit:
         amount: 2
         recipe: '@recipe_spiegeleier'
