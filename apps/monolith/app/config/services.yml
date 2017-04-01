@@ -8,6 +8,9 @@ services:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
 
+    # -------------------------------
+    # Newsletter
+    # -------------------------------
     entity_manager.newsletter_subscription:
         class: Doctrine\Bundle\DoctrineBundle\Registry
         factory: ["@doctrine", getManagerForClass]
@@ -19,6 +22,9 @@ services:
         arguments:
             - "@entity_manager.newsletter_subscription"
 
+    # -------------------------------
+    # Recipe
+    # -------------------------------
     entity_manager.recipe:
         class: Doctrine\Bundle\DoctrineBundle\Registry
         factory: ["@doctrine", getManagerForClass]
@@ -31,3 +37,14 @@ services:
         factory: ["@doctrine.orm.entity_manager", getRepository]
         arguments:
             - AppBundle\Entity\Recipe
+
+    # -------------------------------
+    # Comment
+    # -------------------------------
+    repository.comment:
+        class: AppBundle\Repository\CommentRepository
+        public: true
+        factory: ["@doctrine.orm.entity_manager", getRepository]
+        arguments:
+            - AppBundle\Entity\Comment
+
