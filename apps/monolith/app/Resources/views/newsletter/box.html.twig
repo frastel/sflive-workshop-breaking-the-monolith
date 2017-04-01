@@ -1,6 +1,6 @@
 <div>
     <h3>Newsletter</h3>
-    <form class="form-inline">
+    <form class="form-inline" method="post" action="{{ path('newsletter_subscription_add') }}">
         <div class="input-group">
             <span class="input-group-addon">@</span>
             <input class="form-control" placeholder="foo@example.com" type="text" name="email">
