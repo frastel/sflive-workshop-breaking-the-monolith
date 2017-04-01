@@ -1,0 +1,5 @@
+AppBundle\Entity\Comment:
+    comment_donner_{1..10}:
+        author: '@user*'
+        content: '<text()>'
+        recipe: '@recipe_donner'

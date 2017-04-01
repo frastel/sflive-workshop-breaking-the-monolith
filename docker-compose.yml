@@ -1,0 +1,25 @@
+version: '2'
+services:
+  database:
+    container_name: workshop-database
+    environment:
+      - MYSQL_ROOT_PASSWORD=workshop
+    ports:
+     - "9000:3306"
+    image: "mariadb"
+#  init:
+#    container_name: workshop-init
+#    build: docker/moby-dick
+#    volumes:
+#     - ./apps/monolith:/code
+#    command: ["./bin/init.sh"]
+  monolith:
+    container_name: workshop-monolith
+    build: docker/moby-dick
+    ports:
+     - "8000:80"
+    volumes:
+     - ./apps/monolith:/code
+    depends_on:
+      - database
+#      - init

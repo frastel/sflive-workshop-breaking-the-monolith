@@ -1,0 +1,13 @@
+AppBundle\Entity\User:
+    user_chefkoch:
+        id: 11111111-1111-1111-1111-111111111111
+        name: 'Chefkoch'
+        about: 'Chefkoch.de - Biggest cooking platform in Europe'
+
+    user_internetz:
+        name: 'Internetz'
+        about: 'Can u haz Internetz?'
+
+    user_{1..10}:
+        name: '<name()>'
+        about: '<text()>'
