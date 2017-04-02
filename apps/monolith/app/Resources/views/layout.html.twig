@@ -34,7 +34,7 @@
             crossorigin="anonymous"></script>
     {% endif %}
 
-    {# <esi:include src="/newsletter/bootstrap" /> #}
+    <esi:include src="/newsletter/bootstrap" />
 {% endblock %}
 
 {% block body %}
@@ -65,8 +65,7 @@
             <div class="col-xs-4 col-md-4">
                 <div id="side">
                     {% block sidebar %}
-                        {% include 'newsletter/box.html.twig' %}
-                        {# <esi:include src="/newsletter/box" /> #}
+                        <esi:include src="/newsletter/box" />
                     {% endblock %}
                 </div>
             </div>

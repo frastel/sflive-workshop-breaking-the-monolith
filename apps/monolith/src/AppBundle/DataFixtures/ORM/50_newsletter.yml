@@ -1,3 +1,0 @@
-AppBundle\Entity\NewsletterSubscription:
-    newsletter_subscription_{1..10}:
-        email: '<email()>'
