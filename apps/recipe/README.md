@@ -6,14 +6,14 @@ Provides a JSON API for recipe data.
 ## Docker Compose Snippet
 
       # ------------------
-      # recipe api
+      # recipe
       # ------------------
       recipe-database:
         container_name: workshop-recipe-database
         environment:
           - MYSQL_ROOT_PASSWORD=workshop
         ports:
-         - "9001:3306"
+         - "9002:3306"
         image: "mariadb"
       recipe-init:
         container_name: workshop-recipe-init
@@ -25,7 +25,7 @@ Provides a JSON API for recipe data.
         container_name: workshop-recipe
         build: docker/moby-dick
         ports:
-         - "8001:80"
+         - "8002:80"
         volumes:
          - ./apps/recipe:/code
         depends_on:
