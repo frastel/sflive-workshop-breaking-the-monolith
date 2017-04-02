@@ -29,6 +29,9 @@ Call it via browser
     
 ## Ports
     
+Varnish:
+* http: http://192.168.33.10:8888
+
 Monolith:
 * http: http://192.168.33.10:8000
 * database: 9000
@@ -36,6 +39,10 @@ Monolith:
 Recipe:
 * http: http://192.168.33.10:8001
 * recipe-database: 9001    
+  
+Newsletter:
+* http: http://192.168.33.10:8002
+* **no** database
     
 ## Helper scripts
 
