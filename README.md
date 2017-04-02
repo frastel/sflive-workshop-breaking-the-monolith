@@ -30,23 +30,23 @@ Call it via browser
 ## Ports
     
 Varnish:
-* http: http://192.168.33.10:8888
+* http: http://192.168.33.10:8000
 
 Monolith:
-* http: http://192.168.33.10:8000
+* http: http://192.168.33.10:8001
 * database: 9000
 
 Recipe:
-* http: http://192.168.33.10:8001
-* recipe-database: 9001    
+* http: http://192.168.33.10:8002
+* recipe-database: 9002    
   
 Newsletter:
-* http: http://192.168.33.10:8002
+* http: http://192.168.33.10:8003
 * **no** database
 
 User:
-* http: http://192.168.33.10:8003
-* user-database: 9003  
+* http: http://192.168.33.10:8004
+* user-database: 9004  
     
 ## Helper scripts
 

@@ -17,7 +17,7 @@ services:
     container_name: workshop-monolith
     build: docker/moby-dick
     ports:
-     - "8000:80"
+     - "8001:80"
     volumes:
      - ./apps/monolith:/code
     depends_on:
@@ -33,7 +33,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=workshop
     ports:
-     - "9001:3306"
+     - "9002:3306"
     image: "mariadb"
   recipe-init:
     container_name: workshop-recipe-init
@@ -45,7 +45,7 @@ services:
     container_name: workshop-recipe
     build: docker/moby-dick
     ports:
-     - "8001:80"
+     - "8002:80"
     volumes:
      - ./apps/recipe:/code
     depends_on:
@@ -59,7 +59,7 @@ services:
     container_name: workshop-newsletter
     build: docker/moby-dick
     ports:
-     - "8002:80"
+     - "8003:80"
     volumes:
      - ./apps/newsletter:/code
 
@@ -93,7 +93,7 @@ services:
   varnish:
     container_name: workshop-varnish
     ports:
-     - "8888:80"
+     - "8000:80"
     build: docker/varnish
     depends_on:
       - monolith
