@@ -13,7 +13,7 @@ class UserController extends Controller
 {
     /**
      * @Route("/users/{user}", name="user")
-     * @ParamConverter("user", class="AppBundle:user")
+     * @ParamConverter("user", class="AppBundle:User")
      */
     public function detailAction(Request $request, User $user)
     {
