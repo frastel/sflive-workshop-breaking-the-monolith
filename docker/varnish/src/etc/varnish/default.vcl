@@ -10,9 +10,17 @@ backend newsletter {
   .port = "80";
 }
 
+backend user {
+  .host = "user";
+  .port = "80";
+}
+
 sub vcl_recv {
-    if (req.url ~ "^/newsletter") {
+    # not "/^newsletter"
+    if (req.url ~ "/newsletter") {
         set req.backend_hint = newsletter;
+    } elseif (req.url ~ "/users") {
+        set req.backend_hint = user;
     } else {
         set req.backend_hint = default;
     }

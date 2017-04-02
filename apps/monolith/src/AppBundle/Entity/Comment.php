@@ -36,12 +36,18 @@ class Comment
     private $reference;
 
     /**
-     * @var User
+     * @var string
      *
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="comments")
-     * @ORM\JoinColumn(name="author_id", referencedColumnName="id")
+     * @ORM\Column(type="string", name="author_id", length=100, nullable=false)
      */
-    private $author;
+    private $authorId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string", name="author_name", length=100, nullable=false)
+     */
+    private $authorName;
 
     /**
      * @var string
@@ -90,11 +96,16 @@ class Comment
     }
 
     /**
-     * @return User
+     * @return Author
      */
     public function getAuthor()
     {
-        return $this->author;
+        return new Author(
+            [
+                'id' => $this->authorId,
+                'name' => $this->authorName
+            ]
+        );
     }
 
     /**

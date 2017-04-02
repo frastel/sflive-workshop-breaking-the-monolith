@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# remove this line after everything user-related has been moved to this application
-exit
-
 # wait until database is ready
 ./bin/wait-for-it.sh -h user-database -p 3306
 

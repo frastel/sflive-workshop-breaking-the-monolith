@@ -4,3 +4,6 @@ app:
 
 recipe:
     path: "/recipes/{recipe}"
+
+homepage:
+    path: "/"

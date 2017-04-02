@@ -13,6 +13,6 @@ class UserControllerTest extends WebTestCase
         $crawler = $client->request('GET', '/users/11111111-1111-1111-1111-111111111111');
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertContains('Chefkoch', $crawler->filter('container h2')->text());
+        $this->assertContains('Chefkoch', $crawler->filter('#content h2')->text());
     }
 }
