@@ -19,9 +19,15 @@ class RecipeRepository
     /**
      * @return Recipe[]
      */
-    public function findLatest()
+    public function findLatest($params = array())
     {
-        $entries = $this->curl('http://recipe/api/recipes');
+        $url = 'http://recipe/api/recipes';
+
+        if (count($params)) {
+            $url .= '?'.http_build_query($params);
+        }
+
+        $entries = $this->curl($url);
         $list = [];
         foreach ($entries as $data) {
             $list[] = new Recipe($data);  }
