@@ -21,19 +21,6 @@ $app->get('/newsletter/ping', function() use($app) {
     return '[Newsletter] Pong!';
 });
 
-$app->get('/newsletter/box', function() use($app) {
-    return $app['twig']->render('box.html.twig', []);
-});
-
-$app->get('/newsletter/bootstrap', function() use($app) {
-    return $app['twig']->render('bootstrap.html.twig', []);
-});
-
-$app->post('/newsletter', function() use($app) {
-
-    // do some persistence logic here ...
-
-    return $app['twig']->render('thankyou.html.twig', []);
-});
+// place additional routes here!!!
 
 return $app;
