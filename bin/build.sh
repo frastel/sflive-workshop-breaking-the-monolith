@@ -7,3 +7,6 @@
 
 # newsletter
 ./bin/composer.sh install newsletter
+
+# user
+./bin/composer.sh install user

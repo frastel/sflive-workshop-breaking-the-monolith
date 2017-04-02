@@ -43,6 +43,10 @@ Recipe:
 Newsletter:
 * http: http://192.168.33.10:8002
 * **no** database
+
+User:
+* http: http://192.168.33.10:8003
+* user-database: 9003  
     
 ## Helper scripts
 
