@@ -45,8 +45,8 @@ Newsletter:
 * **no** database
 
 User:
-* http: http://192.168.33.10:8003
-* user-database: 9003  
+* http: http://192.168.33.10:8004
+* user-database: 9004  
     
 ## Helper scripts
 

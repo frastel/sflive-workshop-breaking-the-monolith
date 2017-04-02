@@ -12,7 +12,7 @@ Provides a vertical for the user pages.
         environment:
           - MYSQL_ROOT_PASSWORD=workshop
         ports:
-         - "9003:3306"
+         - "9004:3306"
         image: "mariadb"
       user-init:
         container_name: workshop-user-init
@@ -24,7 +24,7 @@ Provides a vertical for the user pages.
         container_name: workshop-user
         build: docker/moby-dick
         ports:
-         - "8003:80"
+         - "8004:80"
         volumes:
          - ./apps/user:/code
         depends_on:
