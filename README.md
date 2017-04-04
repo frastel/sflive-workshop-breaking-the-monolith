@@ -59,10 +59,3 @@ Afterwards call the test runner with
 - [Symfony File Permissions Hacks with Docker](http://stackoverflow.com/questions/34949083/symfony-docker-permission-problems-for-cache-files)
 - [wait-for-it.sh script](https://github.com/vishnubob/wait-for-it)
 
-## Pastebin 
-
-Ignore this stuff :)
-
-    sudo /vagrant/bin/provision.sh
-    
-    Image for service web was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
