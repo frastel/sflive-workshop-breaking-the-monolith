@@ -3,3 +3,5 @@ AppBundle\Entity\Comment:
         author: '@user*'
         content: '<text()>'
         recipe: '@recipe_donner'
+        #type: 'recipe'
+        #reference: '33333333-3333-3333-3333-333333333333'

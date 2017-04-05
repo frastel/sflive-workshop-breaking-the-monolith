@@ -18,8 +18,41 @@ class RecipeController extends Controller
     public function detailAction(Request $request, Recipe $recipe)
     {
         // replace this example code with whatever you need
-        return $this->render('recipe/detail.html.twig', [
-            'recipe' => $recipe
-        ]);
+        return $this->render(
+            'recipe/detail.html.twig',
+            [
+                'recipe' => $recipe,
+            ]
+        );
+    }
+
+    /**
+     * @Route("/api/recipes", name="recipe_index")
+     */
+    public function indexAction(Request $request)
+    {
+        $queryParams = [
+            'author_id' => null,
+        ];
+
+        foreach ($queryParams as $key => $dummy) {
+            $queryParams[$key] = $request->query->get('author_id', null);
+        }
+
+        $recipes = $this->getRecipeRepository()->findLatest($queryParams);
+
+        return new Response(
+            $this->get('serializer')->serialize($recipes, 'json'),
+            Response::HTTP_OK,
+            ['Content-Type' => 'application/json']
+        );
+    }
+
+    /**
+     * @return RecipeRepository
+     */
+    private function getRecipeRepository()
+    {
+        return $this->container->get('repository.recipe');
     }
 }
