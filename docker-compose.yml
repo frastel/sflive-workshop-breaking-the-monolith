@@ -7,12 +7,12 @@ services:
     ports:
      - "9000:3306"
     image: "mariadb"
-#  init:
-#    container_name: workshop-init
-#    build: docker/moby-dick
-#    volumes:
-#     - ./apps/monolith:/code
-#    command: ["./bin/init.sh"]
+  init:
+    container_name: workshop-init
+    build: docker/moby-dick
+    volumes:
+     - ./apps/monolith:/code
+    command: ["./bin/init.sh"]
   monolith:
     container_name: workshop-monolith
     build: docker/moby-dick
@@ -22,4 +22,29 @@ services:
      - ./apps/monolith:/code
     depends_on:
       - database
-#      - init
+      - init
+#      - recipe
+
+#  recipe-database:
+#    container_name: workshop-recipe-database
+#    environment:
+#      - MYSQL_ROOT_PASSWORD=workshop
+#    ports:
+#     - "9002:3306"
+#    image: "mariadb"
+#  recipe-init:
+#    container_name: workshop-recipe-init
+#    build: docker/moby-dick
+#    volumes:
+#     - ./apps/recipe:/code
+#    command: ["./bin/init.sh"]
+#  recipe:
+#    container_name: workshop-recipe
+#    build: docker/moby-dick
+#    ports:
+#     - "8002:80"
+#    volumes:
+#     - ./apps/recipe:/code
+#    depends_on:
+#      - recipe-database
+#      - recipe-init
