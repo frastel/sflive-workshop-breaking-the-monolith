@@ -4,6 +4,9 @@ Provides a UI Fragment for the Newsletter Subscription box.
 
 ## Docker Compose Snippet
 
+      # ------------------
+      # newsletter
+      # ------------------
       newsletter:
         container_name: workshop-newsletter
         build: docker/moby-dick
