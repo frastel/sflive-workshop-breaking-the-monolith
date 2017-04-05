@@ -63,6 +63,33 @@ services:
     volumes:
      - ./apps/newsletter:/code
 
+  # ------------------
+  # user
+  # ------------------
+#  user-database:
+#    container_name: workshop-user-database
+#    environment:
+#      - MYSQL_ROOT_PASSWORD=workshop
+#    ports:
+#     - "9004:3306"
+#    image: "mariadb"
+#  user-init:
+#    container_name: workshop-user-init
+#    build: docker/moby-dick
+#    volumes:
+#     - ./apps/user:/code
+#    command: ["./bin/init.sh"]
+#  user:
+#    container_name: workshop-user
+#    build: docker/moby-dick
+#    ports:
+#     - "8004:80"
+#    volumes:
+#     - ./apps/user:/code
+#    depends_on:
+#      - user-database
+#      - user-init
+
   varnish:
     container_name: workshop-varnish
     ports:
@@ -71,5 +98,6 @@ services:
     depends_on:
       - monolith
       - newsletter
+#      - user
 
 
