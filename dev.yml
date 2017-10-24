@@ -13,4 +13,25 @@ services:
      - /tmp/:/tmp/ # linking /tmp/ folder because PHPStorm stores its
     depends_on:
       - database
+      - recipe
+
+  recipe-database:
+    container_name: workshop-recipe-database-test
+    environment:
+      - MYSQL_ROOT_PASSWORD=workshop
+    image: "mariadb"
+  recipe-init:
+    container_name: workshop-recipe-init-test
+    build: docker/moby-dick
+    volumes:
+     - ./apps/recipe:/code
+    command: ["./bin/init.sh"]
+  recipe:
+    container_name: workshop-recipe-test
+    build: docker/moby-dick
+    volumes:
+     - ./apps/recipe:/code
+    depends_on:
+      - recipe-database
+      - recipe-init
 
