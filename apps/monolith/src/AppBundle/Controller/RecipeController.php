@@ -2,7 +2,7 @@
 
 namespace AppBundle\Controller;
 
-use AppBundle\Entity\Recipe;
+use AppBundle\Repository\CommentRepository;
 use AppBundle\Repository\RecipeRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
@@ -19,6 +19,10 @@ class RecipeController extends Controller
         $recipe = $this->getRecipeRepository()->findById($recipe);
         $comments = $this->getCommentRepository()->findByReference('recipe', $recipe->getId());
         $recipe->setComments($comments);
+
+        if (!$recipe) {
+            throw $this->createNotFoundException();
+        }
 
         // replace this example code with whatever you need
         return $this->render(
