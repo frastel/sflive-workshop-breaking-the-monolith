@@ -11,4 +11,4 @@ what=$@
 docker run --rm -ti \
     --volume $(pwd)/apps/${app}:/app \
     --volume $(pwd)/.composer:/composer \
-    composer:1.3 $cmd $what
+    composer:1.5 $cmd $what
