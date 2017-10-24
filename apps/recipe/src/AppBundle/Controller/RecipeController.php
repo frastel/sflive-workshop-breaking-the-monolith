@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class RecipeController extends Controller
 {
@@ -24,6 +25,14 @@ class RecipeController extends Controller
                 'recipe' => $recipe,
             ]
         );
+
+        /*
+        return new Response(
+            $this->get('serializer')->serialize($recipe, 'json'),
+            Response::HTTP_OK,
+            ['Content-Type' => 'application/json']
+        );
+        */
     }
 
     /**
