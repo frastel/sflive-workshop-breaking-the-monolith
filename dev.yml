@@ -1,0 +1,16 @@
+version: '2'
+services:
+  database:
+    container_name: workshop-database-test
+    environment:
+      - MYSQL_ROOT_PASSWORD=workshop
+    image: "mariadb"
+  phpunit:
+    container_name: workshop-monolith-test
+    build: docker/moby-dick
+    volumes:
+     - ./apps/monolith:/code
+     - /tmp/:/tmp/ # linking /tmp/ folder because PHPStorm stores its
+    depends_on:
+      - database
+
