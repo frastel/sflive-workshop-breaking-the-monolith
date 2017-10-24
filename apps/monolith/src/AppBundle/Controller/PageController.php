@@ -14,7 +14,6 @@ class PageController extends Controller
      */
     public function homeAction(Request $request)
     {
-
         $recipes = $this->getRecipeRepository()->findLatest();
 
         // replace this example code with whatever you need
