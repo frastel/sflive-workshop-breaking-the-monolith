@@ -8,10 +8,10 @@
         {{ user.about|nl2br }}
     </div>
 
-    {% if recipes|length %}
+    {% if user.recipes|length %}
     <h3>Recipes</h3>
     <ul>
-        {% for recipe in recipes %}
+        {% for recipe in user.recipes %}
             <li><a href="{{ path('recipe', {'recipe': recipe.id}) }}">{{ recipe }}</a></li>
         {% endfor %}
     </ul>
